@@ -117,10 +117,15 @@ Go into the root of your workspace and source your overlay:
 ### Using CMake.
 
 - The simplest possible package may have a file structure that looks like:
+
 `my_package/
+
      CMakeLists.txt
+     
      include/my_package/
+     
      package.xml
+     
      src/
 `
  - Lets see what are these files about:
