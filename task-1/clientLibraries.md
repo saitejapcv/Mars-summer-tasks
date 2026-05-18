@@ -123,3 +123,42 @@ Go into the root of your workspace and source your overlay:
      package.xml
      src/
 `
+ - Lets see what are these files about:
+ 1. `CMakeLists.txt` file that describes how to build the code within the package.
+ 2. `include/<package_name>` directory containing the public headers for the package.
+ 3. `package.xml` file containing meta information about the package.
+ 4. `src` directory containing the source code for the package.
+
+#### Creating Package:
+1. Create a workspace as instructed.
+2. The command syntax for creating a new package in ROS 2 is:
+`ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>`
+3. For this tutorial, you will use the optional argument --node-name which creates a simple Hello World type executable in the package.
+`ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package`
+- Now you will have a directory named `my_package` inside `src` folder.
+
+#### Building Package
+
+- Putting all packages in a workspace is valuable because using `colcon build` will build all the packages.
+- Return to the root of your workspace and build your packages using `colcon build` as instructed. 
+- To build specific package in a workspace use this command
+`colcon build --packages-select <package_name>`
+
+#### Source the setup file
+
+- Open a new terminal and source it inside the workspace directory using:
+` source install/local_setup.bash`
+
+#### Use Package
+- To run the executable you created using the --node-name argument during package creation, enter the command:
+`ros2 run my_package my_node`
+
+#### 6 Customize package.xml
+- You may have noticed in the return message after creating your package that the fields description and license contain TODO notes. That’s because the package description and license declaration are not automatically set, but are required if you ever want to release your package.The maintainer field may also need to be filled in.
+
+- From ros2_ws/src/my_package, open package.xml using your preferred text editor
+- Input your name and email on the maintainer line if it hasn’t been automatically populated for you. Then, edit the description line to summarize the package
+- Then, update the license line with your prefered license.
+- Below the license tag, you will see some tag names ending with _depend. This is where your package.xml would list its dependencies on other packages, for colcon to search for.
+
+
