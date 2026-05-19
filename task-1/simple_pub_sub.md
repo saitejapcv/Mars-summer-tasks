@@ -152,7 +152,9 @@ You will see the C++ Code here.
 
 - Create a package first using 
 
-`ros2 pkg create --build-type ament_python --license Apache-2.0 py_pubsub` 
+`ros2 pkg create --build-type ament_python --license Apache-2.0 py_pubsub`
+
+![text](images/CreatingPackage2.png) 
 
 in a workspace as mentioned in the [clietLibraries file](clientLibraries.md).
 
@@ -162,7 +164,11 @@ in a workspace as mentioned in the [clietLibraries file](clientLibraries.md).
 
 `wget https://raw.githubusercontent.com/ros2/examples/humble/rclpy/topics/minimal_publisher/examples_rclpy_minimal_publisher/publisher_member_function.py`
 
+![text](images/DownCode2.png)
+
 Now you will have a file named `publisher_member_function.py` adjacent to `__init__.py`. Open it using preffered Text Editor.
+
+![text](images/code3.png)
 
 You will see the Python Code here.
 
@@ -170,23 +176,31 @@ You will see the Python Code here.
 
 - The first lines of code after the comments import rclpy so its Node class can be used.
 
+![text](images/Ecode16.png)
 
 - The next statement imports the built-in std_msgs/msg/String message type that the node uses to structure the data that it passes on the topic.
 
+![text](images/Ecode17.png)
 
 - These lines represent the node’s dependencies.
 - Next the `MinimalPublisher` class is created, which inherits from (or is a subclass of) Node.
+
+![text](images/Ecode18.png)
 
 - Following is the definition of the class’s constructor. super().__init__ calls the Node class’s constructor and gives it your node name, in this case minimal_publisher.
 - create_publisher declares that the node publishes messages of type std_msgs/msg/String, over a topic named `topic`, and that the “queue size” is 10. 
 - Queue size is a required Quality of Service (QoS) setting that limits the amount of queued messages if a subscriber is not receiving them fast enough.
 - Next, create_timer is used to create a callback that executes every 0.5 seconds. `self.i` is a counter used in the callback.
 
+![text](images/Ecode19.png)
+
 - `timer_callback` creates a message with the counter value appended, publishes it, and prints it to the console with get_logger()’s info() function.
 
+![text](images/Ecode20.png)
 
 - Lastly, the main function is defined.
 
+![text](images/Ecode21.png)
 
 - First the rclpy library is initialized, then the node is created, and then it “spins” the node (using spin()) so its callbacks are called.
 
@@ -195,6 +209,7 @@ You will see the Python Code here.
 - As I mentioned earlier we need to add our dependencies in `package.xml`.
 - In this file add dependencies in a new line after `</lisense>` tag.
 
+![text](images/Ecode22.png)
 
 - This declares the package needs `rclcpp` and `std_msgs` when its code is built and executed.
 
@@ -204,10 +219,13 @@ You will see the Python Code here.
 
 - Add the following line within the console_scripts brackets of the entry_points field:
 
+![text](images/Ecode23.png)
+
 #### Checkup setup.cfg
 
 - The contents of the setup.cfg file should be correctly populated automatically, like so:
 
+![text](images/Ecode24.png)
 
 - This is simply telling setuptools to put your executables in lib, because ros2 run will look for them there.
 
@@ -217,26 +235,35 @@ You will see the Python Code here.
 
 `wget https://raw.githubusercontent.com/ros2/examples/humble/rclpy/topics/minimal_subscriber/examples_rclpy_minimal_subscriber/subscriber_member_function.py`
 
+![text](images/DownCode4.png)
+
 #### Examine the code
 
 - You can see the python code by openin the `subscriber_member_function.py` with your text editor.
 - The subscriber node’s code is nearly identical to the publisher’s. The constructor creates a subscriber with the same arguments as the publisher using create_subscription.
 
+![text](images/code4.png)
 
 - Topic name and message type used by the publisher and subscriber must match to allow them to communicate.
 
 - The subscriber’s constructor and callback don’t include any timer definition, because it doesn’t need one. Its callback gets called as soon as it receives a message.
 - The callback definition simply prints an info message to the console, along with the data it received. Recall that the publisher defines msg.data = 'Hello World: %d' % self.i
 
+![text](images/Ecode25.png)
 
-- The main definition is almost exactly the same, replacing the creation and spinning of the publisher with the subscriber.
+- The `main` definition is almost exactly the same, replacing the creation and spinning of the publisher with the subscriber.
+
+![text](images/Ecode26.png)
 
 - Since this node has the same dependencies as the publisher, there’s nothing new to add to package.xml. The setup.cfg file can also remain untouched.
+
+![text](images/Ecode27.png)
 
 #### Add an entry point
 
 - Again open setup.py. Add an entry point there which looks like:
 
+![text](images/Ecode28.png)
 
 ### Build and run
 
@@ -248,11 +275,15 @@ You will see the Python Code here.
 
 `colcon build --packages-select py_pubsub`
 
+![text](images/build2.png)
+
 - In a new terminal source your setup files in the workspace
 
 `source install/setup.bash`
 
 - Now run talker and listener nodes you will see the talker publishing and listener hearing every 0.5 sec
 
+![text](images/run3.png)
 
+![text](images/run4.png)
 - You can end it by using Ctrl-C.
