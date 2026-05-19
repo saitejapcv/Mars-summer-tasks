@@ -9,7 +9,7 @@
 - Create a package first using 
 
 `ros2 pkg create --build-type ament_cmake --license Apache-2.0 cpp_pubsub` 
-![text](../Images/CreatingPackage.png)
+![text](Images/CreatingPackage.png)
 in a workspace as mentioned in the [clietLibraries file](clientLibraries.md).
 
 ### Write the publisher node
@@ -18,10 +18,10 @@ Download the example talker code in the directory `ros2_ws/src/cpp_pubsub/src` b
 
 `wget -O publisher_member_function.cpp https://raw.githubusercontent.com/ros2/examples/humble/rclcpp/topics/minimal_publisher/member_function.cpp`
 
-![text](../Images/DownCode.png)
+![text](Images/DownCode.png)
 Now you will have a file named `publisher_member_function.cpp`. Open it using preffered Text Editor.
-![text](../Images/code.png)
-![text](../Images/Ecode.png)
+![text](Images/code.png)
+![text](Images/Ecode.png)
 
 You will see the C++ Code here.
 
@@ -31,41 +31,41 @@ You will see the C++ Code here.
 - After that there is `rclcpp/rclcpp.hpp` include which allows you to use the most common pieces of the ROS 2 system.
 - Last is `std_msgs/msg/string.hpp`, which includes the built-in message type you will use to publish data.
 
-![text](../Images/Ecode1.png)
+![text](Images/Ecode1.png)
 
 - These lines represent node dependencies. 
 - The next line creates the node class `MinimalPublisher` by inheriting from `rclcpp::Node`. 
 - Every `this` in the code is referring to the node.
 
-![text](../Images/Ecode2.png)
+![text](Images/Ecode2.png)
 
 - The public constructor names the node `minimal_publisher` and initializes `count_` to 0.
 - Inside the constructor, the publisher is initialized with the `String` message type, the topic name `topic`, and the required queue size to limit messages in the event of a backup. 
 - Next, `timer_` is initialized, which causes the `timer_callback` function to be executed twice a second.
 
-![text](../Images/Ecode3.png)
+![text](Images/Ecode3.png)
 
 - The `timer_callback` function is where the message data is set and the messages are actually published. 
 - The RCLCPP_INFO macro ensures every published message is printed to the console.
 
-![text](../Images/Ecode4.png)
+![text](Images/Ecode4.png)
 
 - Last is the declaration of the timer, publisher, and counter fields.
 
 
-![text](../Images/Ecode5.png)
+![text](Images/Ecode5.png)
 
 - Following the `MinimalPublisher` class is `main`, where the node actually executes. 
 - `rclcpp::init` initializes ROS 2, and `rclcpp::spin` starts processing data from the node, including callbacks from the timer.
 
-![text](../Images/Ecode6.png)
+![text](Images/Ecode6.png)
 
 #### Add Dependencies
 
 - As I mentioned earlier we need to add our dependencies in `package.xml`.
 - In this file add dependencies in a new line after the `ament_cmake` buildtool dependency.
 
-![text](../Images/Ecode8.png)
+![text](Images/Ecode8.png)
 
 - This declares the package needs `rclcpp` and `std_msgs` when its code is built and executed.
 
@@ -74,19 +74,19 @@ You will see the C++ Code here.
 - We need to add the dependencies here too. 
 - To add these open the `CMakeLists.txt` file. Below the existing dependency `find_package(ament_cmake REQUIRED)`, add the lines:
 
-![text](../Images/Ecode9.png)
+![text](Images/Ecode9.png)
 
 - After that, add the executable and name it `talker` so you can run your node using `ros2 run`:
 
-![text](../Images/Ecode10.png)
+![text](Images/Ecode10.png)
 
 - Finally, add the `install(TARGETS...)` section so `ros2 run` can find your executable:
 
-![text](../Images/Ecode11.png)
+![text](Images/Ecode11.png)
 
 - You can clean up your `CMakeLists.txt` by removing some unnecessary sections and comments, so it looks like this:
 
-![text](../Images/Ecode12.png)
+![text](Images/Ecode12.png)
 
 ### Write the subscriber node
 
@@ -94,11 +94,11 @@ Download the example listener code in the same package by entering the following
 
 `wget -O subscriber_member_function.cpp https://raw.githubusercontent.com/ros2/examples/humble/rclcpp/topics/minimal_subscriber/member_function.cpp`
 
-![text](../Images/DownCode2.png)
+![text](Images/DownCode2.png)
 
 Now you will have a file named `subscriber_member_function.cpp`. Open it using preffered Text Editor.
 
-![text](../Images/code2.png)
+![text](Images/code2.png)
 
 You will see the C++ Code here.
 
@@ -107,11 +107,11 @@ You will see the C++ Code here.
 - The subscriber node is similar to publisher node.
 - Now the node is named `minimal_subscriber`, and the constructor uses the node’s create_subscription class to execute the callback.
 
-![text](../Images/Ecode13.png)
+![text](Images/Ecode13.png)
 
 - The `topic_callback` function receives the string message data published over the topic, and simply writes it to the console using the `RCLCPP_INFO` macro.
 
-![text](../Images/Ecode14.png)
+![text](Images/Ecode14.png)
 
 - The `main` function is exactly the same, except now it spins the `MinimalSubscriber` node.
  For the publisher node, spinning meant starting the timer, but for the subscriber it simply means preparing to receive messages whenever they come.
@@ -122,7 +122,7 @@ You will see the C++ Code here.
 
 - Open `CMakeLists.txt` and add the executable and target for the subscriber node below the publisher’s entries.
 
-![text](../Images/Ecode15.png)
+![text](Images/Ecode15.png)
 
 ### Build and Run
 
@@ -134,7 +134,7 @@ You will see the C++ Code here.
 
 `colcon build --packages-select cpp_pubsub`
 
-![text](../Images/build1.png)
+![text](Images/build1.png)
 
 - Now open a new terminal, navigate to workspace and source the setup files.
 
@@ -142,9 +142,9 @@ You will see the C++ Code here.
 
 - Now run talker and listener nodes you will see the talker publishing and listener hearing every 0.5 sec
 
-![text](../Images/run1.png)
+![text](Images/run1.png)
 
-![text](../Images/run2.png)
+![text](Images/run2.png)
 
 - You can end it by using Ctrl-C
 
