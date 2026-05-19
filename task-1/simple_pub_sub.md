@@ -242,7 +242,7 @@ You will see the Python Code here.
 - You can see the python code by openin the `subscriber_member_function.py` with your text editor.
 - The subscriber node’s code is nearly identical to the publisher’s. The constructor creates a subscriber with the same arguments as the publisher using create_subscription.
 
-![text](images/code4.png)
+![text](images/Code4.png)
 
 - Topic name and message type used by the publisher and subscriber must match to allow them to communicate.
 

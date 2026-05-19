@@ -6,4 +6,19 @@
 - Ubuntu will ask for Update to latest version which is Ubuntu 24.04 Noble. But don't update it.
 - The documentation also has the instructions to uninstall ROS-1.
 
+## Configuring Environment
 
+- [Click here](CLI.md)
+
+## ClientLibraries.mc
+
+- How to create a workspace
+- How to create packages
+- How to build packages
+- [Click here](clientLibraries.md)
+
+## simple_pub_sub.md
+
+- Writing a simple publisher and Subscriber using C++
+- Writing a simple Publisher and Subscriber using Python
+- [Click here](simple_pub_sub.md)
