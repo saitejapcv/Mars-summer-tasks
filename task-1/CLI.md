@@ -25,5 +25,4 @@ ROS_PYTHON_VERSION=3
 ROS_DISTRO=humble`
 - If the environment variables are not set correctly, return to the ROS 2 package installation section of the installation guide you followed.
 
-4. The ROS_DOMAIN_ID variable:
-- 
+
