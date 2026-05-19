@@ -113,6 +113,8 @@ You will see the C++ Code here.
 
 
 
+- You can end it by using Ctrl-C
+
 ## Creating using Python
 
 - Create a package first using 
@@ -217,6 +219,7 @@ You will see the Python Code here.
 
 `source install/setup.bash`
 
-- - Now run talker and listener nodes you will see the talker publishing and listener hearing every 0.5 sec
+- Now run talker and listener nodes you will see the talker publishing and listener hearing every 0.5 sec
 
 
+- You can end it by using Ctrl-C.
