@@ -1,0 +1,4 @@
+[console_scripts]
+circle_patrol_client = turtle_patrol.circle_patrol_client:main
+circle_patrol_server = turtle_patrol.circle_patrol_server:main
+

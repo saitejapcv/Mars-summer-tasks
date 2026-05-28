@@ -1,0 +1,6 @@
+{
+  "package_name": "turtle_patrol_interfaces",
+  "non_idl_tuples": [
+    "/home/charan/Mars-summer-tasks/task-2/ros_ws/src/turtle_patrol_interfaces:action/ExecuteCircle.action"
+  ]
+}
