@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: turtle-collision-avoidance
+Version: 0.0.0
+Summary: Collision avoidance for turtlesim
+Home-page: UNKNOWN
+Maintainer: saitejapcv
+Maintainer-email: charandeviswamy@gmail.com
+License: Apache-2.0
+Platform: UNKNOWN
+Provides-Extra: test
+License-File: LICENSE
+
+UNKNOWN
+

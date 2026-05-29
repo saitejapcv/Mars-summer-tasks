@@ -1,0 +1,25 @@
+[0.284s] Invoking command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/src/turtle_patrol': AMENT_PREFIX_PATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces LD_LIBRARY_PATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/python3.10/site-packages:/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_patrol build --build-base /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/build install --record /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/install.log --single-version-externally-managed install_data
+[0.383s] running egg_info
+[0.383s] writing ../../build/turtle_patrol/turtle_patrol.egg-info/PKG-INFO
+[0.383s] writing dependency_links to ../../build/turtle_patrol/turtle_patrol.egg-info/dependency_links.txt
+[0.383s] writing entry points to ../../build/turtle_patrol/turtle_patrol.egg-info/entry_points.txt
+[0.383s] writing requirements to ../../build/turtle_patrol/turtle_patrol.egg-info/requires.txt
+[0.384s] writing top-level names to ../../build/turtle_patrol/turtle_patrol.egg-info/top_level.txt
+[0.384s] reading manifest file '../../build/turtle_patrol/turtle_patrol.egg-info/SOURCES.txt'
+[0.385s] writing manifest file '../../build/turtle_patrol/turtle_patrol.egg-info/SOURCES.txt'
+[0.385s] running build
+[0.385s] running build_py
+[0.385s] copying turtle_patrol/circle_patrol_server.py -> /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/build/lib/turtle_patrol
+[0.386s] running install
+[0.386s] running install_lib
+[0.386s] copying /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/build/lib/turtle_patrol/circle_patrol_server.py -> /home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol
+[0.386s] byte-compiling /home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol/circle_patrol_server.py to circle_patrol_server.cpython-310.pyc
+[0.388s] running install_data
+[0.388s] running install_egg_info
+[0.389s] removing '/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol-0.0.0-py3.10.egg-info' (and everything under it)
+[0.389s] Copying ../../build/turtle_patrol/turtle_patrol.egg-info to /home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol-0.0.0-py3.10.egg-info
+[0.389s] running install_scripts
+[0.398s] Installing circle_patrol_client script to /home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/turtle_patrol
+[0.398s] Installing circle_patrol_server script to /home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/turtle_patrol
+[0.398s] writing list of installed files to '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/install.log'
+[0.409s] Invoked command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/src/turtle_patrol' returned '0': AMENT_PREFIX_PATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces LD_LIBRARY_PATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol/lib/python3.10/site-packages:/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_patrol build --build-base /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/build install --record /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol/install.log --single-version-externally-managed install_data
