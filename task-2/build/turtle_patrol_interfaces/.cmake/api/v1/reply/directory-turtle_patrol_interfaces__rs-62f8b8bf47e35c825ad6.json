@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "turtle_patrol_interfaces__rs",
+		"source" : "/home/charan/Mars-summer-tasks/task-2/build/turtle_patrol_interfaces/turtle_patrol_interfaces__rs"
+	}
+}

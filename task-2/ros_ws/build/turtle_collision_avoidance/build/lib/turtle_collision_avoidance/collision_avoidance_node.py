@@ -60,7 +60,7 @@ class CollisionAvoidanceNode(Node):
             velocity.angular.z = 1.5
             self.get_logger().info("Danger detected! Turning to safe heading...")
         else:
-            velocity.linear.x = 0.0
+            velocity.linear.x = 2.0
             velocity.angular.z = 0.0
         
         self.publisher.publish(velocity)

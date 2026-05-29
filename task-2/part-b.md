@@ -100,5 +100,31 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 - in the init file of it we have created some variables and a action client.
 
 - Then we have some functions: 
-1. `send_goal` : This will send the goal to the server with goal msg consisting of the radius.
+1. `send_goal` : This will send the goal to the server with goal msg consisting of the radius asynchronously. Also we will spin the node here itself.
+2. `goal_response_callback` : This function will be called when we get the goal response(either accepted or rejected). If the goal is not accepted then the it will print some logs and then it will shutdown. It it is accepted then it will get the result.
+3. `feedback_callback` : This is called when the feedback is given. This will log the status of the turtle's motion that it recieves from the feedback.
+4. `result_callback` : it is called when the result is given by the server. It will check the status of the completion and log accordingly. It will shut the client node down.
+
+- Then we have main function.
+  - here we will check for the the command line arugment. If it exist then it will use that custom radius otherwise it will use the default value of 3.0. 
+  - It will create an object of the class we have defiened. 
+  - It will call the send_goal(radius) function using the object. 
+  - It will end even if we press Ctrl-C(keyboardInturrupt).
+  
+## Adding dependancies and entrypoints:
+
+- Add all dependancies of both nodes in `package.xml` and entrypoints of both nodes in `setup.py` as mentioned in 1st task.
+
+## Building and running the package:
+
+- Use the following command for building the packages:
+
+`colcon build --packages-select turtle_patrol_interfaces turtle_patrol`
+
+- then open 3 new terminal, source them all with `source install/setup.bash` command and do this respectively:
+1. run `ros2 run turtlesim turtlesim_node` commmand
+2. run ` ros2 run turtle_patrol circle_patrol_server` command
+3. run `ros2 run turtle_patrol circle_patrol_client <radius>` command.
+
+Thats it you will see the turtle moving in a circle.
 

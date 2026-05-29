@@ -69,6 +69,7 @@ def generate_launch_description(): # Function
 			executable="<executable-node>",
 			name="<custom-name>", # You will see this name in the list of active node
 			output="screen" # This is where the log msg will be sent
+			# we can also add parameters. 
 		),
 		
 		# Write different nodes we want to launch
