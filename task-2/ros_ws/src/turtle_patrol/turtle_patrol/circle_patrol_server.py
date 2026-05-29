@@ -18,8 +18,8 @@ class CirclePatrolServer(Node):
     def __init__(self):
         super().__init__('circle_patrol_server')
 
-        self.WALL_MIN = 1.0
-        self.WALL_MAX = 10.0
+        self.WALL_MIN = 1.5
+        self.WALL_MAX = 9.5
 
         self.CENTER_X = 5.544
         self.CENTER_Y = 5.544
