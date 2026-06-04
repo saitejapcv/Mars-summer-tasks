@@ -1,4 +1,0 @@
-Invoking command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces -- -j4 -l4
-Invoked command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces -- -j4 -l4
-Invoking command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces
-Invoked command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces

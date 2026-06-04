@@ -1,0 +1,5 @@
+# Ignore everything in the directory
+/ros_ws/*
+
+# Exception: Keep your specific subfolder
+!/ros_ws/src/

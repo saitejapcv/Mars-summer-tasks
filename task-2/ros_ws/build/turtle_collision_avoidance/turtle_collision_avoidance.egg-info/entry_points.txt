@@ -1,3 +1,0 @@
-[console_scripts]
-collision_avoidance_node = turtle_collision_avoidance.collision_avoidance_node:main
-

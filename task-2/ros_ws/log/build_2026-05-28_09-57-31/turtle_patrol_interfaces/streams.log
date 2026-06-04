@@ -1,7 +1,0 @@
-[0.009s] Invoking command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/charan/Mars-summer-tasks/task-2/ros_ws/src/turtle_patrol_interfaces -DCMAKE_INSTALL_PREFIX=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces
-[0.047s] [31mCMake Error at CMakeLists.txt:1 (ccmake_minimum_required):
-[0.047s]   Unknown CMake command "ccmake_minimum_required".
-[0.047s] 
-[0.047s] [0m
-[0.048s] -- Configuring incomplete, errors occurred!
-[0.050s] Invoked command in '/home/charan/Mars-summer-tasks/task-2/ros_ws/build/turtle_patrol_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/charan/Mars-summer-tasks/task-2/ros_ws/src/turtle_patrol_interfaces -DCMAKE_INSTALL_PREFIX=/home/charan/Mars-summer-tasks/task-2/ros_ws/install/turtle_patrol_interfaces
