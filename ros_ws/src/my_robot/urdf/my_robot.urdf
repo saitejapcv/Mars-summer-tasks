@@ -14,10 +14,10 @@
   		<color rgba = "0 0 0 1"/>
   	</material>
   	
-  	<link name="base_footprint"/>
+  	<link name="base_dummy"/>
 
-    	<joint name="base_footprint_joint" type="fixed">
-        	<parent link="base_footprint"/>
+    	<joint name="base_dummy_joint" type="fixed">
+        	<parent link="base_dummy"/>
         	<child link="base_link"/>
         	<origin xyz="0 0 0" rpy="0 0 0"/>
     	</joint>
@@ -381,11 +381,11 @@
 	</gazebo>
 	
 	    <!-- Joint State Publisher Plugin -->
-    <gazebo>
-        <plugin
-            filename="libignition-gazebo-joint-state-publisher-system.so"
-            name="ignition::gazebo::systems::JointStatePublisher">
-        </plugin>
-    </gazebo>
+    	<gazebo>
+        	<plugin
+            	filename="libignition-gazebo-joint-state-publisher-system.so"
+            	name="ignition::gazebo::systems::JointStatePublisher">
+        	</plugin>
+    	</gazebo>
 	
 </robot>
