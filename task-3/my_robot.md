@@ -122,7 +122,7 @@ Also we have used JointStatePublisher plugin.
 
 ## References
 
-[Building a Visual Robot Model](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html)||[Building a Movable Robot Model](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html)||[Adding Physical and Collision Properties](Adding Physical and Collision Properties)||[Describing robots with URDF](https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/)||[URDF XML Specifications](https://wiki.ros.org/urdf/XML)
+[Building a Visual Robot Model](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html)||[Building a Movable Robot Model](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html)||[Adding Physical and Collision Properties](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html)||[Describing robots with URDF](https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/)||[URDF XML Specifications](https://wiki.ros.org/urdf/XML)
 
 [DiffDrive](https://gazebosim.org/api/gazebo/6/classignition_1_1gazebo_1_1systems_1_1DiffDrive.html)||[Friction](https://classic.gazebosim.org/tutorials?tut=friction)||[SDF Friction](http://sdformat.org/spec?ver=1.8&elem=collision#surface_friction)||[JointStatePublisher](https://gazebosim.org/api/gazebo/6/classignition_1_1gazebo_1_1systems_1_1JointStatePublisher.html)
 
