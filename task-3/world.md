@@ -79,5 +79,56 @@ This is `SceneBroadcaster` Plugin which sshows our world scene.
   - `<linear>` is the linear attenuation factor, 1 means attenuate evenly over the distance.
   - `<quadratic>` is the quadratic attenuation factor. It adds curvature to the attenuation.
   - `<direction>` is direction of the light, only applicable to spot and directional light.
-  
-## 
+ 
+For more about Light go [here](https://sdformat.org/spec/1.8/light/)
+ 
+## Ground Plan
+
+```
+<model name="ground_plane">
+            <static>true</static>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                        </plane>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>100 100</size>
+                        </plane>
+                    </geometry>
+                    <material>
+                        <ambient>0.8 0.8 0.8 1</ambient>
+                        <diffuse>0.8 0.8 0.8 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+        </model>
+```
+
+- we use `<model>` tag for specifing ground plane.
+- `static` - Does not move under physics — stays fixed.
+- `collision` - Invisible shape physics engine uses.
+- `visual` - Visible shape you see in Gazebo
+- `normal` - Which way the plane faces — 0 0 1 = faces up (XY plane).
+- `size` - How big the plane is — 100 100 = 100m x 100m.
+- `ambient` - Color in shadow areas. 
+- `diffuse` - Color in lit areas.
+
+## Custom Objects. 
+
+- They are also models and have similar structure as Ground Plan. You can change the properties like changing the geometry, size, etc.
+
+- But if you observe carfully we can see a new element called pose. Pose defines where something is and which way it is facing in 3D space.
+
+- Pose has 6 arguments which are: x, y, z, roll, pitch, yaw. Which are same as in the urdf(xyz, rpy).
+- For more details about models go [here](https://sdformat.org/spec/1.8/model/)
+
+### References:
+
+[SDF worlds](https://gazebosim.org/docs/fortress/sdf_worlds/)||[SDF Docs](https://sdformat.org/spec/1.8/world/)
