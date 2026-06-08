@@ -1,5 +1,6 @@
 # Summer Tasks
 ## Task-1:
+[task-1](/task-1)
 1. Initialise a ROS 2 workspace.
 2. Create one C++ package and one Python package.
 3. Develop a C++ publisher that broadcasts data c++ subscriber that subscribes to the same data and logs it. Do the same for python
@@ -15,7 +16,7 @@
  
 ## Task-2:
 
-[Task-2](/task2)
+[Task-2](/task-2)
 ### Part-1:
 
 - The auto Avoidance Telementry Node
