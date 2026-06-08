@@ -108,7 +108,7 @@ For more about Light go [here](https://sdformat.org/spec/1.8/light/)
                     </material>
                 </visual>
             </link>
-        </model>
+</model>
 ```
 
 - we use `<model>` tag for specifing ground plane.
@@ -129,6 +129,34 @@ For more about Light go [here](https://sdformat.org/spec/1.8/light/)
 - Pose has 6 arguments which are: x, y, z, roll, pitch, yaw. Which are same as in the urdf(xyz, rpy).
 - For more details about models go [here](https://sdformat.org/spec/1.8/model/)
 
+### Launching world
+
+- We lauch the world in gazebo using [ros_gz_sim](https://github.com/gazebosim/ros_gz/blob/humble/ros_gz_sim/README.md).
+
+- We should use the command 
+```
+ros_gz_sim launch gz_sim.launch.py gz_args:=<world_file>
+```
+
+- We do it with launch file [gazebo.launch.py](../ros_ws/src/my_robot/launch/gazebo.launch.py) using:
+
+```
+gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(
+                get_package_share_directory('ros_gz_sim'),
+                'launch',
+                'gz_sim.launch.py'
+            )
+        ]),
+        launch_arguments={
+            'gz_args': '-r ' + world_file
+        }.items()
+)
+```
+
 ### References:
 
 [SDF worlds](https://gazebosim.org/docs/fortress/sdf_worlds/)||[SDF Docs](https://sdformat.org/spec/1.8/world/)
+
+
