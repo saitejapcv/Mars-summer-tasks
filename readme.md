@@ -21,11 +21,11 @@
 
 - The auto Avoidance Telementry Node
 - Circular Patrol & Abortion Management
-[SubTask A](/task2/subtask-a.md)
-[SubTask B](/task2/subtask-b.md)
+[SubTask A](/task-2/subtask-a.md)
+[SubTask B](/task-2/subtask-b.md)
 
 ### Part-2:
 
 - ROS 1 vs ROS 2 Architectural Shift
 - DDS (Data Distribution Service)
-[Part-2](task2/part-2.md)
+[Part-2](task-2/part-2.md)
