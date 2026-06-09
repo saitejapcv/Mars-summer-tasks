@@ -49,6 +49,8 @@
   ros2 launch my_robot rviz.launch.py
   ```
 
+Note: If you are launching rviz of the model for the first time go through [visualisation.md](visualisation.md) for executing it. 
+
 - We can simulate our rover using gazebo using this process
   1. Build the package using `colcon`.
   2. Opne a new terminal and source it.
