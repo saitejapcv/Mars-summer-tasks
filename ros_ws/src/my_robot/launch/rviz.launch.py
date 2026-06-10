@@ -9,7 +9,7 @@ def generate_launch_description():
     pkg_path = get_package_share_directory('my_robot')
 
     # Process Xacro
-    xacro_file = os.path.join(pkg_path, 'urdf', 'my_robot.urdf')
+    xacro_file = os.path.join(pkg_path, 'urdf', 'my_robot.urdf.xacro')
     robot_description = xacro.process_file(xacro_file).toxml()
 
     # Robot State Publisher
