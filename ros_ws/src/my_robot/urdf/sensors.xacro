@@ -21,18 +21,15 @@
         </collision>
         <inertial>
             	<mass value="1.0"/>
-        		<!-- Cylinder: r=0.15, h=0.08, mass=1.0 -->
-        		<!-- ixx = (1/12)*1*(3*0.15^2 + 0.08^2) = 0.006 -->
-        		<!-- iyy = (1/12)*1*(3*0.15^2 + 0.08^2) = 0.006 -->
-        		<!-- izz = (1/2)*1*0.15^2 = 0.011 -->
+            	<!-- Cylinder: r=0.15, h=0.08, mass=1.0 -->
+            	<!-- ixx = (1/12)*1*(3*0.15^2 + 0.08^2) = 0.006 -->
+            	<!-- iyy = (1/12)*1*(3*0.15^2 + 0.08^2) = 0.006 -->
+            	<!-- izz = (1/2)*1*0.15^2 = 0.011 -->
             	<inertia
             		ixx="0.006" ixy="0.0" ixz="0.0"
             		iyy="0.006" iyz="0.0"
             		izz="0.011"/>
         </inertial>
-    </link>
-
-    <gazebo reference="lidar_frame">
         <sensor name="lidar_sensor" type="lidar">
             <pose>0 0 0 0 0 0</pose>
             <visualize>true</visualize>
@@ -53,5 +50,5 @@
                 </range>
             </lidar>
         </sensor>
-    </gazebo>
+    </link>
 </robot>
