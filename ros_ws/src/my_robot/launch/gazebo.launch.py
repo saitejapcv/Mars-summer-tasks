@@ -10,9 +10,8 @@ def generate_launch_description():
     pkg_path = get_package_share_directory('my_robot')
 
     # Read URDF
-    urdf_file = os.path.join(pkg_path, 'urdf', 'my_robot.urdf')
-    with open(urdf_file, 'r') as f:
-        robot_description = f.read()
+    xacro_file = os.path.join(pkg_path, 'urdf', 'my_robot.urdf.xacro')
+    robot_description = xacro.process_file(xacro_file).toxml()
     
     world_file = os.path.join(pkg_path, 'worlds', 'my_robot_world.sdf')
 
