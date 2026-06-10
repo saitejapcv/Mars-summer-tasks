@@ -30,6 +30,9 @@
             		iyy="0.006" iyz="0.0"
             		izz="0.011"/>
         </inertial>
+    </link>
+
+    <gazebo reference="lidar_frame">
         <sensor name="lidar_sensor" type="gpu_lidar">
             <pose>0 0 0 0 0 0</pose>
             <visualize>true</visualize>
@@ -50,5 +53,5 @@
                 </range>
             </lidar>
         </sensor>
-    </link>
+    </gazebo>
 </robot>
