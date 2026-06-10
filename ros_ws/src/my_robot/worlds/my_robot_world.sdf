@@ -18,6 +18,7 @@
                 name="ignition::gazebo::systems::SceneBroadcaster"/>
         <plugin filename="libignition-gazebo-sensors-system.so"
                 name="ignition::gazebo::systems::Sensors">
+            <render_engine>ogre</render_engine>
         </plugin>
 
         <!-- Sunlight -->
