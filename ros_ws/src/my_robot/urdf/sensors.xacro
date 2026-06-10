@@ -4,7 +4,7 @@
     <joint name="lidar_joint" type="fixed">
         <parent link="base_link"/>
         <child link="lidar_frame"/>
-        <origin xyz = "0.3 0 0.4"/>
+        <origin xyz = "0.3 0 0.29"/>
     </joint>
 
     <link name="lidar_frame">
