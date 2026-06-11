@@ -4,7 +4,7 @@
     <joint name="arm_base_joint" type="fixed">
         <parent link="base_link"/>
         <child link="arm_base"/>
-        <origin xyz="-0.3 0 0.29"/>
+        <origin xyz="0.3 0 0.29"/>
     </joint>
 
     <link name="arm_base">
@@ -50,18 +50,18 @@
         </visual>
         <collision>
             <geometry>
-                <box size="0.1 0.1 0.5"/>
+                <box size="0.1 0.1 1"/>
             </geometry>
         </collision>
         <inertial>
             <mass value="1.0"/>
-            <!-- Box: 0.1 x 0.1 x 0.5, mass=1.0 -->
-            <!-- ixx = (1/12)*1*(0.1^2 + 0.5^2) = 0.022 -->
-            <!-- iyy = (1/12)*1*(0.1^2 + 0.5^2) = 0.022 -->
+            <!-- Box: 0.1 x 0.1 x 1, mass=1.0 -->
+            <!-- ixx = (1/12)*1*(0.1^2 + 1^2) = 0.084 -->
+            <!-- iyy = (1/12)*1*(0.1^2 + 1^2) = 0.084 -->
             <!-- izz = (1/12)*1*(0.1^2 + 0.1^2) = 0.0017 -->
             <inertia
-                ixx="0.022" ixy="0.0" ixz="0.0"
-                iyy="0.022" iyz="0.0"
+                ixx="0.084" ixy="0.0" ixz="0.0"
+                iyy="0.084" iyz="0.0"
                 izz="0.0017"/>
         </inertial>
     </link>
