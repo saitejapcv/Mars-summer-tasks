@@ -45,7 +45,7 @@
             <geometry>
                 <box size="0.1 0.1 1"/>
             </geometry>
-            <origin xyz = "0 0 0.71"/>
+            <origin xyz = "0 0 0.46"/>
             <material name = "black"/>
         </visual>
         <collision>
