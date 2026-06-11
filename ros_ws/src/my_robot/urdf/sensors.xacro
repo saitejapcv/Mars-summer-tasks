@@ -32,6 +32,21 @@
         </inertial>
     </link>
 
+    <link name="imu_link">
+        <inertial>
+            <mass value="0.01"/>
+            <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                     iyy="0.001" iyz="0.0"
+                     izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+        <origin xyz = "0 0 0"/>
+    </joint>
+
     <gazebo reference="lidar_frame">
         <sensor name="lidar_sensor" type="gpu_lidar">
             <pose>0 0 0 0 0 0</pose>
@@ -55,6 +70,23 @@
                     <resolution>0.01</resolution>
                 </range>
             </ray>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="imu_link">
+        <sensor name="imu_sensor" type="imu">
+            <always_on>1</always_on>
+            <update_rate>10</update_rate>
+            <visual>true</visual>
+            <topic>/imu/data</topic>
+            <ignition_frame_id>imu_link</ignition_frame_id>
+            <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+                <ros>
+                    <namespace>/imu</namespace>
+                    <topic>~/out:=data</topic>
+                </ros>
+                <initial_orientation_as_reference>false</initial_orientation_as_reference>
+            </plugin>
         </sensor>
     </gazebo>
 </robot>

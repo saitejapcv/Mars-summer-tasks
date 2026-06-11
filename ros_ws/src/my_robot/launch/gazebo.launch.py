@@ -59,6 +59,7 @@ def generate_launch_description():
             '/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
             '/camera/image_raw@sensor_msgs/msg/Image[ignition.msgs.Image',
             '/camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
+            '/imu/data@sensor_msgs/msg/Imu@ignition.msgs.IMU'
         ],
         output='screen'
     )
