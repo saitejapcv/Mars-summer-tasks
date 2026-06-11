@@ -43,9 +43,9 @@
     <link name = "arm_link">
         <visual>
             <geometry>
-                <box size="0.1 0.1 0.5"/>
+                <box size="0.1 0.1 1"/>
             </geometry>
-            <origin xyz = "0 0 0.21"/>
+            <origin xyz = "0 0 0.71"/>
             <material name = "black"/>
         </visual>
         <collision>
