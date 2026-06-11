@@ -2,6 +2,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
     <xacro:include filename="my_robot.urdf" />
+    <xacro:include filename="arm.xacro" />
     <xacro:include filename="sensors.xacro" />
     <xacro:include filename="camera.xacro"/>
 </robot>

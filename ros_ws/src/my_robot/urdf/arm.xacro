@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+    <joint name="arm_base_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="arm_base"/>
+        <origin xyz="-0.3 0 0.29"/>
+    </joint>
+
+    <link name="arm_base">
+        <visual>
+			<geometry>
+				<cylinder radius = "0.15" length = "0.08"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+		<collision>
+            	<geometry>
+            		<cylinder radius="0.15" length="0.08"/>
+        		</geometry>
+        </collision>
+        <inertial>
+            	<mass value="1.0"/>
+            	<!-- Cylinder: r=0.15, h=0.08, mass=1.0 -->
+            	<!-- ixx = (1/12)*1*(3*0.15^2 + 0.08^2) = 0.006 -->
+            	<!-- iyy = (1/12)*1*(3*0.15^2 + 0.08^2) = 0.006 -->
+            	<!-- izz = (1/2)*1*0.15^2 = 0.011 -->
+            	<inertia
+            		ixx="0.006" ixy="0.0" ixz="0.0"
+            		iyy="0.006" iyz="0.0"
+            		izz="0.011"/>
+        </inertial>
+    </link>
+
+    <joint name="arm_joint" type="revolute">
+        <parent link="arm_base"/>
+        <child link="arm_link"/>
+        <origin xyz="0 0 0.04"/>
+        <axis xyz = "0 0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1"/>
+    </joint>
+
+    <link name = "arm_link">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.5"/>
+            </geometry>
+            <origin xyz = "0 0 0"/>
+            <material name = "black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.5"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1.0"/>
+            <!-- Box: 0.1 x 0.1 x 0.5, mass=1.0 -->
+            <!-- ixx = (1/12)*1*(0.1^2 + 0.5^2) = 0.022 -->
+            <!-- iyy = (1/12)*1*(0.1^2 + 0.5^2) = 0.022 -->
+            <!-- izz = (1/12)*1*(0.1^2 + 0.1^2) = 0.0017 -->
+            <inertia
+                ixx="0.022" ixy="0.0" ixz="0.0"
+                iyy="0.022" iyz="0.0"
+                izz="0.0017"/>
+        </inertial>
+    </link>
+</robot>
