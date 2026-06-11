@@ -4,7 +4,7 @@
     <joint name="lidar_joint" type="fixed">
         <parent link="base_link"/>
         <child link="lidar_frame"/>
-        <origin xyz = "0.3 0 0.29"/>
+        <origin xyz = "0.3 0 -0.29"/>
     </joint>
 
     <link name="lidar_frame">
@@ -65,7 +65,7 @@
                     </horizontal>
                 </scan>
                 <range>
-                    <min>0.3</min>
+                    <min>1</min>
                     <max>10</max>
                     <resolution>0.01</resolution>
                 </range>
