@@ -56,7 +56,7 @@ def generate_launch_description():
         executable='parameter_bridge',
         arguments=[
             '/cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist',
-            '/model/my_robot/link/lidar_frame/sensor/lidar_sensor/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
+            '/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
         ],
         remappings=[
             ('/model/my_robot/link/lidar_frame/sensor/lidar_sensor/scan', '/scan'),
