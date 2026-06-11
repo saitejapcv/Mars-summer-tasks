@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <joint name="camera_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="camera_frame"/>
+        <origin xyz = "0.905 0 0.1"/>
+    </joint>
+
+    <link name="camera_frame">
+        <visual>
+			<geometry>
+				<cylinder radius = "0.02" length = "0.01"/>
+			</geometry>
+			<material name="red"/>
+            <origin rpy = "0 1.5708 0"/>
+		</visual>
+    </link>
+
+    <gazebo reference="camera_frame">
+        <!-- <sensor name="camera_sensor" type="gpu_lidar">
+            <pose>0 0 0 0 0 0</pose>
+            <visualize>true</visualize>
+            <topic>/scan</topic>
+            <ignition_frame_id>lidar_frame</ignition_frame_id>
+            <update_rate>10</update_rate>
+            <always_on>1</always_on>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                        <resolution>1</resolution>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>10</max>
+                    <resolution>0.01</resolution>
+                </range>
+            </ray>
+        </sensor> -->
+    </gazebo>
+</robot>
