@@ -4,7 +4,7 @@
     <joint name="camera_joint" type="fixed">
         <parent link="arm_link"/>
         <child link="camera_frame"/>
-        <origin xyz = "0 0 0.55"/>
+        <origin xyz = "0 0 0.101"/>
     </joint>
 
     <link name="camera_frame">
@@ -13,7 +13,7 @@
 				<cylinder radius = "0.05" length = "0.01"/>
 			</geometry>
 			<material name="red"/>
-            <origin rpy = "0 1.5708 0"/>
+            <origin rpy = "0 0 0"/>
 		</visual>
     </link>
 
