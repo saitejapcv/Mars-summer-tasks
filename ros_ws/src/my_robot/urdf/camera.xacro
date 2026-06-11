@@ -10,12 +10,20 @@
     <link name="camera_frame">
         <visual>
 			<geometry>
-				<cylinder radius = "0.02" length = "0.01"/>
+				<cylinder radius = "0.05" length = "0.01"/>
 			</geometry>
 			<material name="red"/>
             <origin rpy = "0 1.5708 0"/>
 		</visual>
     </link>
+
+    <joint name="camera_optical_joint" type="fixed">
+        <parent link="camera_frame"/>
+        <child link="camera_optical_frame"/>
+        <origin xyz = "0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+    </joint>
+
+    <link name="camera_optical_frame"/>
 
     <gazebo reference="camera_frame">
         <!-- <sensor name="camera_sensor" type="gpu_lidar">
