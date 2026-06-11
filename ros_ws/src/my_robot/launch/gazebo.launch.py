@@ -57,6 +57,8 @@ def generate_launch_description():
         arguments=[
             '/cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist',
             '/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
+            '/camera/image_raw@sensor_msgs/msg/Image[ignition.msgs.Image',
+            '/camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
         ],
         output='screen'
     )

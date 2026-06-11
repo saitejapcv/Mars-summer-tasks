@@ -31,6 +31,7 @@
             <visualize>true</visualize>
             <update_rate>10</update_rate>
             <always_on>1</always_on>
+            <topic>camera/image_raw</topic>
             <camera>
                 <horizontal_fov>1.089</horizontal_fov>
                 <image>
