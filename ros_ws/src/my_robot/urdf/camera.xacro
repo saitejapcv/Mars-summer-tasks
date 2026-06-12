@@ -4,7 +4,7 @@
     <joint name="camera_joint" type="fixed">
         <parent link="arm_link"/>
         <child link="camera_frame"/>
-        <origin xyz="0 0 0.96" rpy="0 ${-pi/2} 0"/>
+        <origin xyz="0 0 0.96" rpy="0 0 0"/>
     </joint>
 
     <link name="camera_frame">
@@ -20,14 +20,14 @@
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_frame"/>
         <child link="camera_optical_frame"/>
-        <origin xyz = "0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}"/>
     </joint>
 
     <link name="camera_optical_frame"/>
 
     <gazebo reference="camera_frame">
         <sensor name="camera_sensor" type="camera">
-            <pose>0 0 0 0 0 0</pose>
+            <pose>0 0 0 0 -1.57079632679 0</pose>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
             <always_on>1</always_on>
