@@ -82,7 +82,7 @@
     </ros2_control>
 
     <gazebo>
-        <plugin filename="libign_ros2_control-system.so" name="ign_ros2_control::IgnitionROS2ControlSystem">
+        <plugin filename="libign_ros2_control-system.so" name="ign_ros2_control::IgnitionROS2ControlPlugin">
             <parameters>$(find my_robot)/config/controllers.yaml</parameters>
         </plugin>
     </gazebo>
