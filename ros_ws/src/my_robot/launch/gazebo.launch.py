@@ -77,10 +77,26 @@ def generate_launch_description():
         output='screen'
     )
 
+    joint_state_broadcaster_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
+        output='screen'
+    )
+
+    arm_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['arm_controller', '--controller-manager', '/controller_manager'],
+        output='screen'
+    )
+
     return LaunchDescription([
         gazebo,
         robot_state_publisher,
         spawn_robot,
         bridge,
         joint_state_bridge,
+        joint_state_broadcaster_spawner,
+        arm_controller_spawner,
     ])

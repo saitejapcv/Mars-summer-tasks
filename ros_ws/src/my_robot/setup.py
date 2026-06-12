@@ -19,7 +19,7 @@ setup(
         (os.path.join('share', package_name, 'worlds'),
          glob('worlds/*.sdf')),
         (os.path.join('share', package_name, 'config'),
-         glob('config/*.rviz')),
+         glob('config/*.rviz') + glob('config/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

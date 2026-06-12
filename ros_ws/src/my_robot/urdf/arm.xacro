@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <joint name="arm_base_joint" type="fixed">
         <parent link="base_link"/>
         <child link="arm_base"/>
@@ -66,4 +66,24 @@
                 izz="0.0017"/>
         </inertial>
     </link>
+
+    <ros2_control name="IgnitionSystem" type="system">
+        <hardware>
+            <plugin>ign_ros2_control/IgnitionSystem</plugin>
+        </hardware>
+        <joint name="arm_joint">
+            <command_interface name="position">
+                <param name="min">-1.57</param>
+                <param name="max">1.57</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+    </ros2_control>
+
+    <gazebo>
+        <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlSystem">
+            <parameters>$(find my_robot)/config/controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
 </robot>
