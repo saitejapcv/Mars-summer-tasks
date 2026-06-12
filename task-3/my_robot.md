@@ -18,7 +18,7 @@
 - Then we can see the `material` tag. It is used to define colours and textures. We should give an attribute `name` to that tag which is used when we want to use it later. Inside that we specify material properties. Here we specified color using `color` tag. We specify the color in rgba format using `rgba` parameter to the tag.
 
 
-### <link> element
+### link element
 
 - Now comes the main tag. Which is `link` tag. It is where we create our parts. Initally we used it to create a dummy. The dummy is used because we cannot give inertia to the root link. If we don't use dummy the `base_link` will be chosen as root link. Then we cannot specify inertia to that. We talk about inertia in later sections
 
@@ -44,7 +44,7 @@
   - `mass` tag : The mass of the link is represented by the value attribute of this element.
   - `inertia` tag: This is link's moments of inertia ixx, iyy, izz and products of inertia ixy, ixz, iyz about Co (the link’s center of mass) for the unit vectors Ĉx, Ĉy, Ĉz fixed in the center-of-mass frame C. Note: the orientation of Ĉx, Ĉy, Ĉz relative to L̂x, L̂y, L̂z is specified by the rpy values in the <origin> tag. To caluculate the values of ixx, ixy, ixz, iyy, iyz, izz for some primitive shapes go [here](https://en.wikipedia.org/wiki/List_of_moments_of_inertia#List_of_3D_inertia_tensors).
   
-### <joint> Element
+### joint Element
 
 The joint element describes the kinematics and dynamics of the joint and also specifies the safety limits of the joint.
 
@@ -81,7 +81,7 @@ The joint element describes the kinematics and dynamics of the joint and also sp
   - `velocity ` - An attribute for enforcing the maximum joint velocity. [see safety limits here](https://wiki.ros.org/pr2_controller_manager/safety_limits)
 - There are some other Elemets like `<calibration>`, `<dynamics>`, `<mimic>`, `<safety_controller>`, which we didn't use here. To know about those in detail go [here](https://wiki.ros.org/urdf/XML/joint)
 
-### <gazebo> Element
+### gazebo Element
 
 - The gazebo element is an extension to the URDF robot description format, used for simulation purposes in the Gazebo simulator.
 - We have used DiffDrive Plugin in this file. To know about this in detail go [here](https://gazebosim.org/api/gazebo/6/classignition_1_1gazebo_1_1systems_1_1DiffDrive.html#details)
