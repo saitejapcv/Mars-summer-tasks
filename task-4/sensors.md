@@ -107,6 +107,8 @@ This code implements a Lidar sensor for the My Robot in Gazebo.
 
 - I have implemented camera sensor on the single joint arm.
 
+![image](images/camera_rviz.png)
+
 ### Code
 
 - We have written the code of the camera sensor in `~/Mars-summer-tasks/ros_ws/src/my_robot/urdf/camera.xacro`.
@@ -156,7 +158,7 @@ This code implements a Lidar sensor for the My Robot in Gazebo.
 
 - I have used `libgazebo_ros_camera_plugin.so` plugin to implement the camera sensor.
 
-![image](/images/camera_rviz.png)
+![image](images/camera_rviz.png)
 
 ## References
 
