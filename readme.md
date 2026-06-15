@@ -35,3 +35,28 @@
 - ROS 1 vs ROS 2 Architectural Shift
 - DDS (Data Distribution Service)
 [Part-2](task-2/part-2.md)
+
+- Resources are stated in their respective readme file.
+
+## Task-3
+
+[Task-3](/task-3/)
+
+- Creating a Rover using URDF.
+- Creating a world for gazebo simulation using SDF.
+- Spawning the Rover to gazebo.
+- Learned about TF Trees, Rover state publisher and joint state publisher.
+- Controlling Rover using `teleop_twist_keyboard`.
+
+- Resources are stated in their respective readme file.
+
+## Task-4
+
+[Task-4](/task-4/)
+
+- Integrating IMU, LIDAR and Camera to the rover.
+- Bridging the data of the sensors using `ros_gz_bridge`.
+- Creating a one joint arm on the rover. And attaching the camera to it.
+- Using `ros2_control` and `rqt_joint_trajectory_controller` to control the arm.
+
+- Resources are stated in their respective readme file.
