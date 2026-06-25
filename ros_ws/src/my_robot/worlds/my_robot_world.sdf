@@ -136,11 +136,11 @@
 
         <model name="aruco_marker_0">
             <static>true</static>
-            <pose>3 2 3 0 0 0</pose>
+            <pose>3 2 1.3 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                     <geometry>
-                        <box><size>0.3 0.3 0.1</size></box>
+                        <box><size>0.03 0.3 0.3</size></box>
                     </geometry>
                     <material>
                         <diffuse>1 1 1 1</diffuse>
@@ -153,13 +153,236 @@
                 </visual>
                 <collision name="collision">
                     <geometry>
-                        <box><size>0.3 0.3 0.1</size></box>
+                        <box><size>0.03 0.3 0.3</size></box>
                     </geometry>
                 </collision>
             </link>
         </model>
 
-        
+        <model name="aruco_marker_1">
+            <static>true</static>
+            <pose>1 3 1.4 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_1.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_2">
+            <static>true</static>
+            <pose>3 -3 1.6 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_2.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_3">
+            <static>true</static>
+            <pose>-3 -2 1.2 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_3.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_4">
+            <static>true</static>
+            <pose>5 1.4 1.7 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_4.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_5">
+            <static>true</static>
+            <pose>3.9 5.4 1.2 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_5.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_6">
+            <static>true</static>
+            <pose>-5.6 -1.4 1.9 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_6.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_7">
+            <static>true</static>
+            <pose>-4.8 -2.7 1.6 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_7.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_8">
+            <static>true</static>
+            <pose>-4.7 4.6 1.3 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_8.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="aruco_marker_9">
+            <static>true</static>
+            <pose>-3.2 -2.4 1.3 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_9.png</albedo_map>
+                            </metal>
+                        </pbr>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box><size>0.03 0.3 0.3</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
 
     </world>
 </sdf>
