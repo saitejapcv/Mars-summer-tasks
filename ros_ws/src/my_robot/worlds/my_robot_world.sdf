@@ -146,7 +146,7 @@
                         <diffuse>1 1 1 1</diffuse>
                         <script>
                             <name>Marker0</name>
-                            <scrip>../aruco_markers/aruco_marker_images/marker_0.png</scrip>
+                            <uri>../aruco_markers/aruco_marker_images/marker_0.png</uri>
                         </script>
                     </material>
                 </visual>
