@@ -144,10 +144,11 @@
                     </geometry>
                     <material>
                         <diffuse>1 1 1 1</diffuse>
-                        <script>
-                            <name>Marker0</name>
-                            <uri>../aruco_markers/aruco_marker_images/marker_0.png</uri>
-                        </script>
+                        <pbr>
+                            <metal>
+                                <albedo_map>../aruco_markers/aruco_marker_images/marker_0.png</albedo_map>
+                            </metal>
+                        </pbr>
                     </material>
                 </visual>
                 <collision name="collision">

@@ -20,6 +20,8 @@ setup(
          glob('worlds/*.sdf')),
         (os.path.join('share', package_name, 'config'),
          glob('config/*.rviz') + glob('config/*.yaml')),
+        (os.path.join('share', package_name, 'aruco_markers', 'aruco_marker_images'),
+         glob('aruco_markers/aruco_marker_images/*.png')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
