@@ -150,7 +150,7 @@
                         </script>
                     </material>
                 </visual>
-                <collision>
+                <collision name="collision">
                     <geometry>
                         <box><size>0.3 0.3 0.1</size></box>
                     </geometry>
