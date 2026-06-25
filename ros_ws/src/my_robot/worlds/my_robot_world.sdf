@@ -134,5 +134,31 @@
             </link>
         </model>
 
+        <model name="aruco_marker_0">
+            <static>true</static>
+            <pose>3 2 3 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <box><size>0.3 0.3 0.1</size></box>
+                    </geometry>
+                    <material>
+                        <diffuse>1 1 1 1</diffuse>
+                        <script>
+                            <name>Marker0</name>
+                            <scrip>../aruco_markers/aruco_marker_images/marker_0.png</scrip>
+                        </script>
+                    </material>
+                </visual>
+                <collision>
+                    <geometry>
+                        <box><size>0.3 0.3 0.1</size></box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        
+
     </world>
 </sdf>
