@@ -3,9 +3,9 @@
 <package format="3">
   <name>aruco_detection</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>TO detect aruco markers</description>
   <maintainer email="charandeviswamy@gmail.com">charan</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
   <depend>cv_bridge</depend>
