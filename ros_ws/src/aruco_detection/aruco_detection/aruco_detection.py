@@ -72,7 +72,7 @@ class ArucoDetectorNode(Node):
         )
 
         self.image_sub = self.create_subscription(
-            Image, self.image_topic, self.image_callback, image_qos
+            Image, self.image_topic, self.image_callback, img_qos
         )
         self.camera_info_sub = self.create_subscription(
             CameraInfo, self.camera_info_topic, self.camera_info_callback, info_qos
