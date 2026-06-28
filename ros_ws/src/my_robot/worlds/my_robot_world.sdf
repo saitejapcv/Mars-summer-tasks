@@ -55,10 +55,10 @@
                         </plane>
                     </geometry>
                     <material>
-                        <ambient>0.8 0.8 0.8 1</ambient>
+                <ambient>0.8 0.8 0.8 1</ambient>
                         <diffuse>0.8 0.8 0.8 1</diffuse>
                     </material>
-                </visual>
+        </visual>
             </link>
         </model>
 
@@ -77,10 +77,10 @@
                         <box><size>1 1 1</size></box>
                     </geometry>
                     <material>
-                        <ambient>1 0 0 1</ambient>
+                <ambient>1 0 0 1</ambient>
                         <diffuse>1 0 0 1</diffuse>
                     </material>
-                </visual>
+        </visual>
             </link>
         </model>
 
@@ -105,10 +105,10 @@
                         </cylinder>
                     </geometry>
                     <material>
-                        <ambient>0 1 0 1</ambient>
+                <ambient>0 1 0 1</ambient>
                         <diffuse>0 1 0 1</diffuse>
                     </material>
-                </visual>
+        </visual>
             </link>
         </model>
 
@@ -127,10 +127,10 @@
                         <box><size>2 1 0.5</size></box>
                     </geometry>
                     <material>
-                        <ambient>0 0 1 1</ambient>
+                <ambient>0 0 1 1</ambient>
                         <diffuse>0 0 1 1</diffuse>
                     </material>
-                </visual>
+        </visual>
             </link>
         </model>
 
@@ -150,7 +150,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -175,7 +175,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -200,7 +200,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -225,7 +225,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -250,7 +250,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -275,7 +275,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -300,7 +300,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -325,7 +325,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -350,7 +350,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -375,7 +375,7 @@
                             </metal>
                         </pbr>
                     </material>
-                </visual>
+        </visual>
                 <collision name="collision">
                     <geometry>
                         <box><size>0.03 0.3 0.3</size></box>
@@ -392,12 +392,15 @@
         <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>assets/tinker.obj</uri>
+                    <uri>assets/cone_red.obj</uri>
                     <scale>0.015 0.015 0.01667</scale>
                 </mesh>
             </geometry>
             <material>
+                <ambient>1 0 0 1</ambient>
                 <diffuse>1 0 0 1</diffuse>
+                <specular>0 0 0 1</specular>
+                <emissive>0 0 0 1</emissive>
             </material>
         </visual>
         <collision name="collision">
@@ -418,12 +421,15 @@
         <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>assets/tinker.obj</uri>
+                    <uri>assets/cone_yellow.obj</uri>
                     <scale>0.015 0.015 0.01667</scale>
                 </mesh>
             </geometry>
             <material>
+                <ambient>1 1 0 1</ambient>
                 <diffuse>1 1 0 1</diffuse>
+                <specular>0 0 0 1</specular>
+                <emissive>0 0 0 1</emissive>
             </material>
         </visual>
         <collision name="collision">
@@ -444,12 +450,15 @@
         <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>assets/tinker.obj</uri>
+                    <uri>assets/cone_blue.obj</uri>
                     <scale>0.015 0.015 0.01667</scale>
                 </mesh>
             </geometry>
             <material>
+                <ambient>0 0 1 1</ambient>
                 <diffuse>0 0 1 1</diffuse>
+                <specular>0 0 0 1</specular>
+                <emissive>0 0 0 1</emissive>
             </material>
         </visual>
         <collision name="collision">
@@ -470,12 +479,15 @@
         <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>assets/tinker.obj</uri>
+                    <uri>assets/cone_orange.obj</uri>
                     <scale>0.015 0.015 0.01667</scale>
                 </mesh>
             </geometry>
             <material>
+                <ambient>1 0.5 0 1</ambient>
                 <diffuse>1 0.5 0 1</diffuse>
+                <specular>0 0 0 1</specular>
+                <emissive>0 0 0 1</emissive>
             </material>
         </visual>
         <collision name="collision">
@@ -496,12 +508,15 @@
         <visual name="visual">
             <geometry>
                 <mesh>
-                    <uri>assets/tinker.obj</uri>
+                    <uri>assets/cone_green.obj</uri>
                     <scale>0.015 0.015 0.01667</scale>
                 </mesh>
             </geometry>
             <material>
+                <ambient>0 1 0 1</ambient>
                 <diffuse>0 1 0 1</diffuse>
+                <specular>0 0 0 1</specular>
+                <emissive>0 0 0 1</emissive>
             </material>
         </visual>
         <collision name="collision">
