@@ -1,0 +1,3 @@
+cone_detection:
+  classes:
+    0: 'Cones'

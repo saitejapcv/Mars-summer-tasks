@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'cone_detection'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'config'),
+         glob('config/*.pt')) + glob('config/*.pt'),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -24,6 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'cone_detector_node = cone_detection.cone_detector_node:main',
         ],
     },
 )
