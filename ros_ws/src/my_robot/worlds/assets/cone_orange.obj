@@ -1,5 +1,5 @@
-
-
+mtllib cone_orange.mtl
+usemtl Orange
 o obj_0
 v 0 		-10 		0
 v 1.3053 		-9.9144 		0

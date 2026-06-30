@@ -1,5 +1,5 @@
-
-
+mtllib cone_yellow.mtl
+usemtl Yellow
 o obj_0
 v 0 		-10 		0
 v 1.3053 		-9.9144 		0
