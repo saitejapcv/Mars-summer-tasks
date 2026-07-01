@@ -28,7 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'cone_detector_node = cone_detection.cone_detector_node:main',
+            'cone_detection_node = cone_detection.cone_detection_node:main',
         ],
     },
 )
