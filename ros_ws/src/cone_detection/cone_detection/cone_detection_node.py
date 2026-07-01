@@ -1,13 +1,14 @@
 import rclpy
 from rclpy.node import Node 
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from ament_index_python.packages import get_package_share_directory
 
 import os
 import yaml
 
 from sensor_msgs.msg import Image 
 from cv_bridge import CvBridge
-from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesis
+from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesisWithPose
 
 import cv2
 import numpy as np
@@ -24,8 +25,18 @@ class ConeDetectionNode(Node):
     def __init__(self):
         super().__init__("cone_detector")
 
-        self.declare_parameter('model_path', '../config/cone_model.pt')
-        self.declare_parameter('class_names_file', '../config/class_names.yaml')
+        # Get package share directory to locate config files reliably
+        try:
+            package_share_directory = get_package_share_directory('cone_detection')
+            default_model_path = os.path.join(package_share_directory, 'config', 'cone_model.pt')
+            default_class_names_file = os.path.join(package_share_directory, 'config', 'class_names.yaml')
+        except Exception:
+            # Fallback to relative paths if not run inside a workspace context
+            default_model_path = '../config/cone_model.pt'
+            default_class_names_file = '../config/class_names.yaml'
+
+        self.declare_parameter('model_path', default_model_path)
+        self.declare_parameter('class_names_file', default_class_names_file)
         self.declare_parameter('image_topic', '/camera/image_raw')
         self.declare_parameter('conf_threshold', 0.4)
         self.declare_parameter('device', 'cpu')
@@ -33,7 +44,6 @@ class ConeDetectionNode(Node):
 
         model_path = self.get_parameter('model_path').value
         class_names_file = self.get_parameter('class_names_file').value
-        self.model = YOLO(model_path)
         self.conf = float(self.get_parameter('conf_threshold').value)
         self.device = self.get_parameter('device').value
         self.publish_debug = bool(self.get_parameter('publish_debug_image').value)
@@ -45,18 +55,18 @@ class ConeDetectionNode(Node):
                 data = yaml.safe_load(f)
             self.class_names = {int(k): v for k, v in data['cone_detection']['classes'].items()}
             self.get_logger().info(f'Loaded {len(self.class_names)} class names from {class_names_file}')
-
         else:
-            self.get_logger().warn('No class_names_file provided')
+            self.get_logger().warn(f'No valid class_names_file found/provided at: {class_names_file}')
 
         if not ULTRALYTICS_AVAILABLE:
             self.get_logger().error("ultralytics not available")
             return
 
         if not os.path.isfile(model_path):
-            self.get_logger().error(f"Model file not found at {model_path}")
+            self.get_logger().error(f"Model file not found at: {model_path}")
             return
 
+        self.model = YOLO(model_path)
         self.bridge = CvBridge()
 
         qos = QoSProfile(
@@ -69,7 +79,7 @@ class ConeDetectionNode(Node):
             )
 
         self.detection_pub = self.create_publisher(
-            Detection2dArray, "/cone_detections", 10
+            Detection2DArray, "/cone_detections", 10
             )
         if self.publish_debug:
             self.debug_pub = self.create_publisher(
@@ -91,7 +101,7 @@ class ConeDetectionNode(Node):
         results = self.model(cv_image, conf=self.conf, device=self.device, verbose = False)
         result = results[0]
 
-        detection_array = Detection2dArray()
+        detection_array = Detection2DArray()
         detection_array.header = msg.header
 
         for box in result.boxes:
@@ -106,18 +116,18 @@ class ConeDetectionNode(Node):
             else:
                 cls_name = f'class_{cls_id}'
 
-            det = Detection2d()
+            det = Detection2D()
             det.header = msg.header
-            det.bbox.center.position.x = float((x1 + x2) / 2.0)
-            det.bbox.center.position.y = float((y1 + y2) / 2.0)
-            det.bbox.size.x = float(x2 - x1)
-            det.bbox.size.y = float(y2 - y1)
+            det.bbox.center.x = float((x1 + x2) / 2.0)
+            det.bbox.center.y = float((y1 + y2) / 2.0)
+            det.bbox.size_x = float(x2 - x1)
+            det.bbox.size_y = float(y2 - y1)
 
-            hyp = ObjectHypothesis()
+            hyp = ObjectHypothesisWithPose()
             hyp.hypothesis.class_id = cls_name
             hyp.hypothesis.score = conf
-            det.hypothesis.append(hyp)
-            detection_array.detecions.append(det)
+            det.results.append(hyp)
+            detection_array.detections.append(det)
 
             self.get_logger().info(
                 f'{cls_name} at ({(x1+x2)/2.0:.1f},{(y1+y2)/2.0:.1f})'
