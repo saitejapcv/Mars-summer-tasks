@@ -118,8 +118,8 @@ class ConeDetectionNode(Node):
 
             det = Detection2D()
             det.header = msg.header
-            det.bbox.center.x = float((x1 + x2) / 2.0)
-            det.bbox.center.y = float((y1 + y2) / 2.0)
+            det.bbox.center.position.x = float((x1 + x2) / 2.0)
+            det.bbox.center.position.y = float((y1 + y2) / 2.0)
             det.bbox.size_x = float(x2 - x1)
             det.bbox.size_y = float(y2 - y1)
 
