@@ -1,13 +1,13 @@
 import rclpy
 from rclpy.node import Node 
-from rclpy.node import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 
 import os
 import yaml
 
 from sensor_msgs.msg import Image 
 from cv_bridge import CvBridge
-from vision_msgs.msg import Detection2dArray, Detection2d, ObjectHypothesisWithPose
+from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesis
 
 import cv2
 import numpy as np
@@ -24,16 +24,17 @@ class ConeDetectionNode(Node):
     def __init__(self):
         super().__init__("cone_detector")
 
-        self.declare_parameter('model_path', 'cone_model.pt')
-        self.declare_parameter('class_names_file', '')
+        self.declare_parameter('model_path', '../config/cone_model.pt')
+        self.declare_parameter('class_names_file', '../config/class_names.yaml')
         self.declare_parameter('image_topic', '/camera/image_raw')
         self.declare_parameter('conf_threshold', 0.4)
         self.declare_parameter('device', 'cpu')
         self.declare_parameter('publish_debug_image', True)
 
         model_path = self.get_parameter('model_path').value
-        class_names_file = self.get_parameter('class_names_file', '')
-        conf = float(self.get_parameter('conf').value)
+        class_names_file = self.get_parameter('class_names_file').value
+        self.model = YOLO(model_path)
+        self.conf = float(self.get_parameter('conf_threshold').value)
         self.device = self.get_parameter('device').value
         self.publish_debug = bool(self.get_parameter('publish_debug_image').value)
 
@@ -119,11 +120,11 @@ class ConeDetectionNode(Node):
             detection_array.detecions.append(det)
 
             self.get_logger().info(
-                f'{cls_name} at ({(x1+x2)/2.0:.1f},{({y1+y2})/2.0:.1f})'
+                f'{cls_name} at ({(x1+x2)/2.0:.1f},{(y1+y2)/2.0:.1f})'
                 f'size = ({x2-x1:.0f}x{y2-y1:.0f} conf={conf:.2f})',
                 throttle_duration_sec=0.5,
             )
-        self.detections_pub.publish(detection_array)
+        self.detection_pub.publish(detection_array)
 
         if self.publish_debug:
             annotated = result.plot()
